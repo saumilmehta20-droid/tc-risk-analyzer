@@ -10,8 +10,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__, static_folder='public')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PUBLIC_DIR = os.path.join(BASE_DIR, 'public')
+
+app = Flask(__name__, static_folder=PUBLIC_DIR, static_url_path='')
 CORS(app)
+
+# Force no debug reloader under WSGI
+if 'PA_WSGI' in os.environ:
+    app.debug = False
+else:
+    app.debug = (os.getenv('FLASK_DEBUG', '') == '1')
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', 'demo-mode')
 PORT = int(os.getenv('PORT', 3000))
@@ -76,16 +85,26 @@ Be thorough, specific, and cite actual consumer protection laws. Use markdown fo
 
 @app.route('/')
 def index():
-    return send_from_directory('public', 'index.html')
+    return _send_static('index.html')
 
 
 @app.route('/chat')
 def chat_page():
-    return send_from_directory('public', 'chat.html')
+    return _send_static('chat.html')
+
+
+def _send_static(name):
+    target = os.path.join(PUBLIC_DIR, name)
+    if os.path.exists(target):
+        return send_from_directory(PUBLIC_DIR, name)
+    return send_from_directory('public', name)
 
 
 @app.route('/<path:path>')
 def static_files(path):
+    target = os.path.join(PUBLIC_DIR, path)
+    if os.path.exists(target):
+        return send_from_directory(PUBLIC_DIR, path)
     return send_from_directory('public', path)
 
 
@@ -533,4 +552,4 @@ if __name__ == '__main__':
     else:
         print(f"\nOpenAI API key detected. Full AI analysis enabled.\n")
 
-    app.run(host='0.0.0.0', port=PORT, debug=True)
+    app.run(host='0.0.0.0', port=PORT, debug=app.debug)
