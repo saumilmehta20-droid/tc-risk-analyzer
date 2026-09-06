@@ -15,9 +15,10 @@ build/
 venv/
 .venv/
 
-# Node (if used later)
+# Node (React frontend)
 node_modules/
-package-lock.json
+frontend/node_modules/
+frontend/dist/
 
 # IDE
 .vscode/

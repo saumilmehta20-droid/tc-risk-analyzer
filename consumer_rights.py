@@ -3,49 +3,49 @@ consumer_rights = {
         {
             "name": "Right to Information",
             "description": "Consumers have the right to be informed about the quality, quantity, potency, purity, standard and price of goods or services.",
-            "laws": ["Consumer Protection Act 2019 (India)", "FTC Act (US)", "Consumer Rights Directive (EU)"],
+            "laws": ["Consumer Protection Act 2019 (India)", "FTC Act Section 5 (US)", "Consumer Rights Directive 2011/83/EU"],
             "keywords": ["transparency", "disclosure", "information", "clear", "honest"]
         },
         {
             "name": "Right to Choose",
             "description": "Consumers have the right to be assured, wherever possible, access to a variety of goods and services at competitive prices.",
-            "laws": ["Consumer Protection Act 2019 (India)", "Competition Act", "EU Consumer Rights Directive"],
+            "laws": ["Consumer Protection Act 2019 (India)", "Competition Act 2002 (India)", "Consumer Rights Directive 2011/83/EU"],
             "keywords": ["choice", "competition", "variety", "alternative", "monopoly"]
         },
         {
             "name": "Right to Safety",
             "description": "Consumers have the right to be protected against the marketing of goods or services which are hazardous to life and property.",
-            "laws": ["Consumer Protection Act 2019 (India)", "Product Liability (US)", "Product Safety Directive (EU)"],
+            "laws": ["Consumer Protection Act 2019 (India)", "Consumer Product Safety Act (US)", "General Product Safety Regulation (EU) 2023/988"],
             "keywords": ["safety", "hazard", "dangerous", "risk", "harm"]
         },
         {
             "name": "Right to Redressal",
             "description": "Consumers have the right to seek redressal against unfair trade practices or exploitation.",
-            "laws": ["Consumer Protection Act 2019 (India)", "Magnuson-Moss Warranty Act (US)", "ADR Directive (EU)"],
+            "laws": ["Consumer Protection Act 2019 (India)", "Magnuson-Moss Warranty Act (US)", "Alternative Dispute Resolution Directive 2013/11/EU"],
             "keywords": ["redressal", "compensation", "refund", "grievance", "complaint"]
         },
         {
             "name": "Right to Consumer Education",
             "description": "Consumers have the right to acquire knowledge and skill to be an informed consumer.",
-            "laws": ["Consumer Protection Act 2019 (India)", "Consumer Education (US)", "Consumer Protection (EU)"],
+            "laws": ["Consumer Protection Act 2019 (India)", "Consumer Rights Directive 2011/83/EU"],
             "keywords": ["education", "awareness", "knowledge", "information"]
         },
         {
             "name": "Right to Privacy",
             "description": "Consumers have the right to protect their personal data and privacy.",
-            "laws": ["GDPR (EU)", "CCPA (California)", "DPDP Act (India)", "IT Act (India)"],
+            "laws": ["GDPR (EU)", "CCPA/CPRA (California)", "DPDP Act 2023 (India)"],
             "keywords": ["privacy", "personal data", "data protection", "confidential", "tracking"]
         },
         {
             "name": "Right to Fair Contract",
             "description": "Contracts should not contain unfair terms that create significant imbalance in rights and obligations.",
-            "laws": ["Unfair Contract Terms Act (UK)", "UTLA (US)", "Unfair Terms Directive (EU)"],
+            "laws": ["Consumer Rights Act 2015 (UK)", "Unfair Contract Terms Directive 93/13/EEC (EU)", "State UDAP statutes (US)"],
             "keywords": ["unfair", "contract", "terms", "imbalance", "one-sided"]
         },
         {
             "name": "Right to Cancel",
             "description": "Consumers have the right to cancel purchases within a cooling-off period.",
-            "laws": ["Cooling-off Rule (US)", "Distance Selling Directive (EU)", "E-Commerce Rules (India)"],
+            "laws": ["FTC Cooling-Off Rule (US)", "Consumer Rights Directive 2011/83/EU", "Consumer Protection (E-Commerce) Rules 2020 (India)"],
             "keywords": ["cancel", "withdraw", "cooling-off", "return", "cancellation"]
         }
     ],
